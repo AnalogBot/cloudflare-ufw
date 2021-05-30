@@ -37,7 +37,7 @@ You can run the ```sudo ufw status verbose``` command to see the rules that are 
 
 ### Install the script
 
-Git clone this repo to your system, and run the bash script in the normal manner;
+Git clone this repo to your system, open the script in your favorite editor, set the ports you want to allow with the PORT_LIST variable, and then run the bash script in the normal manner;
 
 ```sudo /your/path/cloudflare-ufw/./cloudflare-ufw.sh```
 
