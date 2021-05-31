@@ -1,0 +1,7 @@
+[Unit]
+Description=Cloudflare ufw script
+Requires=ufw.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/cloudflare-ufw.sh
