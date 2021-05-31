@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # List of ports you want to allow. To allow all ports, set to empty string
 # The port list must conform to the syntax described in the ufw man page
