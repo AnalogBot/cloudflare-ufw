@@ -58,6 +58,26 @@ and add the event;
 
 If using node-red, simply add ```sudo /your/path/cloudflare-ufw/./cloudflare-ufw.sh``` to an 'exec node' and inject it every week.
 
+**Using the systemd timers for scheduling**
+Copy cloudflare-ufw.sh to /usr/sbin/
+
+```sudo cp cloudflare-ufw.sh /usr/sbin/```
+
+Copy the systemd unit files to /etc/systemd/system/
+
+```sudo cp cloudflare-ufw.service /etc/systemd/system/```
+```sudo cp cloudflare-ufw.timer /etc/systemd/system/```
+
+Reload the systemd daemon
+
+```sudo systemctl daemon-reload```
+
+Enable the timer and start it
+
+```sudo systemctl enable cloudflare-ufw.timer```
+```sudo systemctl start cloudflare-ufw.timer```
+
+
 ### Other UFW commands
 
 #### Delete a single rule
