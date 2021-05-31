@@ -74,9 +74,12 @@ Reload the systemd daemon
 
 Enable the timer and start it
 
-```sudo systemctl enable cloudflare-ufw.timer```
-```sudo systemctl start cloudflare-ufw.timer```
+```sudo systemctl enable cloudflare-ufw.timer``` 
+```sudo systemctl start cloudflare-ufw.timer``` 
 
+Validate the timer is scheduled
+
+```systemctl list-timers```
 
 ### Other UFW commands
 
