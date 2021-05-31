@@ -2,7 +2,8 @@
 Description=Schedule cloudflare-ufw.sh weekly 
 
 [Timer]
-OnUnitActiveSec=1w
+OnCalendar=weekly
+Persistent=true
 
 [Install]
 WantedBy=timers.target
