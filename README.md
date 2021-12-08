@@ -46,7 +46,11 @@ The script will then download Cloudflare's current v4 & v6 IP's, and install the
 ### Scheduling
 
 Everytime the script is run, it will add any new Cloudflare IP addresses, so consider running the script weekly to ensure that it's kept up to date.  
-The script can run automatically by using cron;
+The script can run automatically by using cron, Node-RED, or systemd timers;
+
+**Cron**
+
+Open the crontab as root
 
 ```sudo crontab -e```
 
@@ -54,11 +58,12 @@ and add the event;
 
 ```0 0 * * 1 /your/path/cloudflare-ufw/cloudflare-ufw.sh > /dev/null 2>&1```
 
-**OR**
+**Node-RED**
 
 If using node-red, simply add ```sudo /your/path/cloudflare-ufw/./cloudflare-ufw.sh``` to an 'exec node' and inject it every week.
 
-**Using the systemd timers for scheduling**
+**Systemd timers**
+
 Copy cloudflare-ufw.sh to /usr/sbin/
 
 ```sudo cp cloudflare-ufw.sh /usr/sbin/```
