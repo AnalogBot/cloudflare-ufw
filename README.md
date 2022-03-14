@@ -19,8 +19,8 @@ and set the default rules to deny incoming and allow outgoing connections;
 ```sudo ufw default deny incoming```  
 ```sudo ufw default allow outgoing```
 
-It's important at this stage to prevent being accidently being locked out of your system by adding 2 rules, before going further.  
-Add a localhost rule;
+It's important at this stage to prevent being accidently locked out of your system by adding 2 rules before going further.  
+If you're on the same network as the server, add a local network rule (substitute your own network for 192.168.1.0/24);
 
 ```sudo ufw allow from 192.168.1.0/24```
 
